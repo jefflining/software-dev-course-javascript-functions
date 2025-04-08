@@ -33,25 +33,21 @@ This activity reinforces:
 // ============================================
 
 // Script 1 - Greeting multiple users
-console.log("Welcome, Alice!");
-console.log("Welcome, Bob!");
-console.log("Welcome, Charlie!");
+greet("Alice");
+greet("Bob");
+greet("Charlie");
 
 // Script 2 - Sum calculation
 let num1 = 5, num2 = 10;
-let sum = num1 + num2;
-console.log("The sum of 5 and 10 is " + sum);
+printSum(num1, num2);
 
 // Script 3 - Product calculation
-let product = num1 * num2;
-console.log("The product of 5 and 10 is " + product);
+printProduct(num1, num2);
 
 // Script 4 - Print names from a list
 let names = ["Alice", "Bob", "Charlie"];
-console.log("Names in the list:");
-for (let i = 0; i < names.length; i++) {
-    console.log(names[i]);
-}
+printNames(names);
+
 
 /*
 ===========================================
@@ -77,27 +73,34 @@ function greet(name) {
    console.log("Welcome, " + name + "!");
 }
 
-greet("Alice");
-greet("Bob");
-greet("Charlie");
 
-
-const sumNumbers = function(num1, num2) {
+function add(num1, num2) {
    return num1 + num2;
 };
 
-console.log(sumNumbers(5,10));
+function printSum(num1, num2) {
+   console.log(`The sum of ${num1} and ${num2} is ${add(num1, num2)}.`);
+}
 
-const productOfNumbers = function(num1, num2) {
+
+function multiply(num1, num2) {
    return num1 * num2;
 };
 
-console.log(productOfNumbers(5,10));
+function printProduct(num1,num2) {
+   console.log(`The product of ${num1} and ${num2} is ${multiply(num1, num2)}.`);
+}
 
-function listNames(names) {
-   for (let i = 0; i < names.length; i++) {
-      console.log(names[i]);
+
+function printNames(arr) {
+   for (let i = 0; i < arr.length; i++) {
+      console.log(arr[i]);
  }
 } 
 
-listNames(["Alice", "Bob", "Charlie"]);
+
+
+
+
+
+
