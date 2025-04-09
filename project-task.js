@@ -46,6 +46,7 @@ printProduct(num1, num2);
 
 // Script 4 - Print names from a list
 let names = ["Alice", "Bob", "Charlie"];
+console.log("Names in the list:");
 printNames(names);
 
 
